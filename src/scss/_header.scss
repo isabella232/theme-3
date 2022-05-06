@@ -312,26 +312,32 @@
         ul {
             @apply m-4;
 
-            li {
-                a {
-                    @apply block;
+            div {
+                &:not(:first-of-type) {
+                    @apply mt-4;
                 }
             }
 
+            li {
+                a {
+                    @apply block;
+                    margin-left: 1.1rem;
+                }
+            }
+            
             .mobile-menu-item {
+                @apply text-xl font-display text-gray-800;
+                @apply mt-4;
+            }
+
+            .mobile-menu-heading {
                 @apply text-xl font-display text-gray-800;
 
                 &:not(:first-of-type) {
                     @apply mt-6;
                 }
             }
-
-            .mobile-menu-item:active {
-                .mobile-menu-subitem {
-                    display: block !important;
-                }
-            }
-
+            
             .mobile-menu-subitem {
                 @apply ml-6 mt-4 text-base hidden;
 
@@ -343,6 +349,56 @@
                         color: #4A5568;
                     }
                 }
+            }
+
+            .dropdown-menu-caret {
+                @apply w-0 h-0 m-1 relative left-2 top-3;
+                content: "";
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid black;
+                @apply opacity-50;
+
+            }
+
+            .invisible-checkbox {
+                opacity: 0%;
+            }
+            
+            #overview-mobile-menu:checked ~ .mobile-menu-subitem {
+                @apply block;
+            }
+            
+            #overview-mobile-menu:checked ~ .mobile-menu-heading {
+                color: $brand-violet;
+            }
+
+            #overview-mobile-menu:checked ~ .dropdown-menu-caret {
+                transform: rotate(180deg);
+            }
+            
+            #product-mobile-menu:checked ~ .mobile-menu-subitem {
+                @apply block;
+            }
+
+            #product-mobile-menu:checked ~ .mobile-menu-heading {
+                color: $brand-violet;
+            }
+
+            #product-mobile-menu:checked ~ .dropdown-menu-caret {
+                transform: rotate(180deg);
+            }
+
+            #learn-mobile-menu:checked ~ .mobile-menu-subitem {
+                @apply block;
+            }
+
+            #learn-mobile-menu:checked ~ .mobile-menu-heading {
+                color: $brand-violet;
+            }
+
+            #learn-mobile-menu:checked ~ .dropdown-menu-caret {
+                transform: rotate(180deg);
             }
         }
     }

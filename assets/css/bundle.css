@@ -3767,8 +3767,13 @@ ul.glossary{
   margin: 1rem
 }
 
+.header-container .mobile-menu ul div:not(:first-of-type){
+  margin-top: 1rem
+}
+
 .header-container .mobile-menu ul li a{
-  display: block
+  display: block;
+  margin-left:1.1rem
 }
 
 .header-container .mobile-menu ul .mobile-menu-item{
@@ -3776,15 +3781,20 @@ ul.glossary{
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
+  color: rgba(47, 48, 50, var(--tw-text-opacity));
+  margin-top: 1rem
+}
+
+.header-container .mobile-menu ul .mobile-menu-heading{
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
   color: rgba(47, 48, 50, var(--tw-text-opacity))
 }
 
-.header-container .mobile-menu ul .mobile-menu-item:not(:first-of-type){
+.header-container .mobile-menu ul .mobile-menu-heading:not(:first-of-type){
   margin-top: 1.5rem
-}
-
-.header-container .mobile-menu ul .mobile-menu-item:active .mobile-menu-subitem{
-  display:block !important
 }
 
 .header-container .mobile-menu ul .mobile-menu-subitem{
@@ -3806,6 +3816,60 @@ ul.glossary{
 .header-container .mobile-menu ul .mobile-menu-subitem a i{
   min-width:2rem;
   color:#4a5568
+}
+
+.header-container .mobile-menu ul .dropdown-menu-caret{
+  position: relative;
+  top: 0.75rem;
+  left: 0.5rem;
+  margin: 0.25rem;
+  height: 0px;
+  width: 0px;
+  content:"";
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #000;
+  opacity: 0.5
+}
+
+.header-container .mobile-menu ul .invisible-checkbox{
+  opacity:0%
+}
+
+.header-container .mobile-menu ul #overview-mobile-menu:checked~.mobile-menu-subitem{
+  display: block
+}
+
+.header-container .mobile-menu ul #overview-mobile-menu:checked~.mobile-menu-heading{
+  color:#805ac3
+}
+
+.header-container .mobile-menu ul #overview-mobile-menu:checked~.dropdown-menu-caret{
+  transform:rotate(180deg)
+}
+
+.header-container .mobile-menu ul #product-mobile-menu:checked~.mobile-menu-subitem{
+  display: block
+}
+
+.header-container .mobile-menu ul #product-mobile-menu:checked~.mobile-menu-heading{
+  color:#805ac3
+}
+
+.header-container .mobile-menu ul #product-mobile-menu:checked~.dropdown-menu-caret{
+  transform:rotate(180deg)
+}
+
+.header-container .mobile-menu ul #learn-mobile-menu:checked~.mobile-menu-subitem{
+  display: block
+}
+
+.header-container .mobile-menu ul #learn-mobile-menu:checked~.mobile-menu-heading{
+  color:#805ac3
+}
+
+.header-container .mobile-menu ul #learn-mobile-menu:checked~.dropdown-menu-caret{
+  transform:rotate(180deg)
 }
 
 .header-container .mobile-menu-toggle:checked+.mobile-menu-icon+.mobile-menu{
