@@ -3783,9 +3783,14 @@ ul.glossary{
   margin-top: 1.5rem
 }
 
+.header-container .mobile-menu ul .mobile-menu-item:active .mobile-menu-subitem{
+  display:block !important
+}
+
 .header-container .mobile-menu ul .mobile-menu-subitem{
   margin-top: 1rem;
   margin-left: 1.5rem;
+  display: none;
   font-size: 1rem;
   line-height: 1.5rem
 }
